@@ -16,8 +16,7 @@
 
 ATempleSystemStudyCharacter::ATempleSystemStudyCharacter()
 {
-	bCanTurn = true;
-	//DesiredRotation = ;
+	bCanTurn = false;
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -97,7 +96,7 @@ void ATempleSystemStudyCharacter::TurnCornor()
 		FMath::RInterpTo(GetController()->GetControlRotation(),
 			DesiredRotation, 
 			GetWorld()->GetDeltaSeconds(),
-			5.f)
+			10.f)
 	);
 }
 
