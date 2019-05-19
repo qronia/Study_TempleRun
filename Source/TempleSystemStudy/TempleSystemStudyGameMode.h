@@ -13,7 +13,6 @@ class ATempleSystemStudyGameMode : public AGameModeBase
 
 public:
 	ATempleSystemStudyGameMode();
-	virtual void BeginPlay() override;
 };
 
 
