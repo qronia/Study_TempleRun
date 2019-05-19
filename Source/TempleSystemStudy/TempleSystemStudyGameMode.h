@@ -13,7 +13,7 @@ class ATempleSystemStudyGameMode : public AGameModeBase
 
 public:
 	ATempleSystemStudyGameMode();
-	void AddFloorTile();
+	virtual void BeginPlay() override;
 };
 
 

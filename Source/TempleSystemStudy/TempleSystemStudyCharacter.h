@@ -43,6 +43,12 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void Death();
 
+	UFUNCTION(BlueprintCallable)
+	void AddCoin();
+
+	UPROPERTY(BlueprintReadOnly)
+	int32 TotalCoins;
+
 	bool bCanTurn;
 	bool bIsDead;
 	FRotator DesiredRotation;

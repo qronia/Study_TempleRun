@@ -4,9 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/PointLightComponent.h"
 #include "Item.generated.h"
 
-UCLASS()
+UCLASS(BlueprintType)
 class TEMPLESYSTEMSTUDY_API AItem : public AActor
 {
 	GENERATED_BODY()
@@ -18,6 +19,18 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* Scene;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* Body;
+
+	UPROPERTY(EditAnywhere)
+	UPointLightComponent* PointLight;
+
+	UPROPERTY(EditAnywhere)
+	class URotatingMovementComponent* RotatingMovement;
 
 public:	
 	// Called every frame

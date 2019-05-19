@@ -148,6 +148,11 @@ void ATempleSystemStudyCharacter::Death()
 	Audio->Play();
 }
 
+void ATempleSystemStudyCharacter::AddCoin()
+{
+	++TotalCoins;
+}
+
 void ATempleSystemStudyCharacter::Tick(float DeltaTimes)
 {
 	if (bIsDead) return;
