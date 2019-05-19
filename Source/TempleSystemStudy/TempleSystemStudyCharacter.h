@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "EngineMinimal.h"
 #include "GameFramework/Character.h"
 #include "TempleSystemStudyCharacter.generated.h"
 
@@ -34,12 +34,24 @@ public:
 
 protected:
 	void MoveForward(float Value);
+	void MoveRight(float Value);
+
 	void TurnLeft();
 	void TurnRight();
 	void TurnCornor();
 
+	UFUNCTION(BlueprintCallable)
+	void Death();
+
 	bool bCanTurn;
+	bool bIsDead;
 	FRotator DesiredRotation;
+
+	UPROPERTY()
+	UParticleSystemComponent* ExplosionParticle;
+
+	UPROPERTY()
+	UAudioComponent* Audio;
 
 protected:
 	// APawn interface
