@@ -13,6 +13,7 @@ class ATempleSystemStudyGameMode : public AGameModeBase
 
 public:
 	ATempleSystemStudyGameMode();
+	void AddFloorTile();
 };
 
 
