@@ -135,6 +135,8 @@ void ATempleSystemStudyCharacter::TurnCornor()
 			GetWorld()->GetDeltaSeconds(),
 			10.f)
 	);
+
+	bCanTurn = false;
 }
 
 void ATempleSystemStudyCharacter::Death()

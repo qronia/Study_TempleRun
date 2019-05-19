@@ -49,6 +49,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	int32 TotalCoins;
 
+	UPROPERTY(BlueprintReadWrite)
 	bool bCanTurn;
 	bool bIsDead;
 	FRotator DesiredRotation;
