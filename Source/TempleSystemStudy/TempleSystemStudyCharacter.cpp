@@ -127,7 +127,7 @@ void ATempleSystemStudyCharacter::TurnRight()
 
 void ATempleSystemStudyCharacter::TurnCornor()
 {
-	if (GetActorRotation() == DesiredRotation) return;
+	if (GetActorRotation().Equals(DesiredRotation, 0.2f)) return;
 
 	GetController()->SetControlRotation(
 		FMath::RInterpTo(GetController()->GetControlRotation(),
